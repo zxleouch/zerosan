@@ -3,8 +3,8 @@ date_default_timezone_set('Asia/Jakarta');
 include "function.php";
 echo color("green","# # # # # # # # # # # # # # # # # # # # # # # \n");
 echo color("yellow","[•]  Time  : ".date('[d-m-Y] [H:i:s]')."   \n");
-echo color("yellow","[•] Follow INSTAGRAM @HilmawanAbdr \n");
-echo color("yellow","[•] MASUKIN NOMOR FRESH\n");
+echo color("yellow","[•] Follow INSTAGRAM @llvvxx \n");
+echo color("yellow","[•] MASUKIN NOMOR FRESH DISINI 62xx \n");
 echo color("green","# # # # # # # # # # # # # # # # # # # # # # # \n");
 function change(){
         $nama = nama();
@@ -18,7 +18,7 @@ function change(){
         $otptoken = getStr('"otp_token":"','"',$register);
         echo color("green","+] Kode verifikasi sudah di kirim")."\n";
         otp:
-        echo color("nevy","?] Otp: ");
+        echo color("nevy","?] KODE OTP: ");
         $otp = trim(fgets(STDIN));
         $data1 = '{"client_name":"gojek:cons:android","data":{"otp":"' . $otp . '","otp_token":"' . $otptoken . '"},"client_secret":"83415d06-ec4e-11e6-a41b-6c40088ab51e"}';
         $verif = request("/v5/customers/phone/verify", null, $data1);
@@ -38,20 +38,6 @@ function change(){
         echo color("yellow",".");
         sleep(3);
         }
-        $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"HEPIBROS"}');
-        $message = fetch_value($code1,'"message":"','"');
-        if(strpos($code1, 'Promo kamu sudah bisa dipakai')){
-        echo "\n".color("green","+] Message: ".$message);
-        goto gocar;
-        }else{
-        echo "\n".color("red","-] Message: ".$message);
-        gocar:
-        echo "\n".color("yellow","!] Claim voc GOFOOD 15+10+5");
-        echo "\n".color("yellow","!] Please wait");
-        for($a=1;$a<=3;$a++){
-        echo color("yellow",".");
-        sleep(20);
-        }
         $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD090320A"}');
         $message = fetch_value($code1,'"message":"','"');
         if(strpos($code1, 'Promo kamu sudah bisa dipakai')){
@@ -64,21 +50,6 @@ function change(){
         $claim = request("/customer_referrals/v1/campaign/enrolment", $token, $data);
         $message = fetch_value($claim,'"message":"','"');
         if(strpos($claim, 'Promo kamu sudah bisa dipakai')){
-        echo "\n".color("green","+] Message: ".$message);
-        goto gofood;
-        }else{
-        echo "\n".color("red","-] Message: ".$message);
-        }
-        gofood:
-        echo "\n".color("yellow","!] Claim voc 20k 5 voucher");
-        echo "\n".color("yellow","!] Please wait");
-        for($a=1;$a<=3;$a++){
-        echo color("yellow",".");
-        sleep(3);
-        }
-        $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"G-CSPCZKC"}');
-        $message = fetch_value($code1,'"message":"','"');
-        if(strpos($code1, 'Promo kamu sudah bisa dipakai')){
         echo "\n".color("green","+] Message: ".$message);
         sleep(1);
         sleep(3);
